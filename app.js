@@ -7,8 +7,8 @@ const prefectureDataMap = new Map();
 rl.on("line",lineString => {
     const columns = lineString.split(",");
     const year = parseInt(columns[0]);
-    const prefecture = columns[2];
-    const popu = parseInt(columns[7]);
+    const prefecture = columns[1];
+    const popu = parseInt(columns[3]);
 
     if(year === 2010 || year === 2015){
         let value = prefectureDataMap.get(prefecture);
